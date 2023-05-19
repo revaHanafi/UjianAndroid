@@ -40,11 +40,12 @@ public class MainActivity extends AppCompatActivity {
                 }else{
 
                     String nama_lengkap = isian_nama_depan.concat(" ").concat(isian_nama_belakang);
-                    for (int i = 0; i < isian_umur; i++) {
-                        daftar_nama.add(nama_lengkap);
-                    }
+
                     daftar_nama.clear();
-                    daftar_nama.add(String.valueOf(isian_umur).concat(". ").concat(nama_lengkap));
+                    daftar_nama.add(nama_lengkap);
+                    for (int i = 0; i < isian_umur; i++) {
+                        daftar_nama.add(i+". "+nama_lengkap);
+                    }
                     edNamaDepan.setText("");
                     edUmur.setText("");
                     edNamaBelakang.setText("");
